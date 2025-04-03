@@ -40,6 +40,10 @@
       font-size: 1.1rem;
       color: #555;
     }
+    /* Updated the accent color here to light purple (#b48de2) */
+    header h1 strong {
+      color: #b48de2;
+    }
     main {
       max-width: 800px;
       margin: 2rem auto;
@@ -48,10 +52,11 @@
     section {
       margin-bottom: 2rem;
     }
+    /* Changed border-left color to light purple (#b48de2) */
     h2 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
-      border-left: 5px solid #1a73e8;
+      border-left: 5px solid #b48de2;
       padding-left: 0.5rem;
     }
     ul, ol {
@@ -74,21 +79,28 @@
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#presentations">Presentations</a></li>
+      <li><a href="#teaching">Teaching</a></li>
       <li><a href="#activities">Activities</a></li>
       <li><a href="#awards">Honors & Awards</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- ===== Header / Intro Section ===== -->
   <header>
-    <h1>Hello, I’m <br /> 
-      <strong style="color:#1a73e8;">Seung Eun (Katy) Choi</strong>
+    <h1>
+      Hello, I’m <br /> 
+      <strong>Seung Eun (Katy) Choi</strong>
     </h1>
-    <img src="katy_profile.jpg" alt="Seung Eun (Katy) Choi" width="200" style="border-radius: 50%;" />
+    <!-- Updated image styling for a perfectly round, 200x200 circle -->
+    <img 
+      src="katy_profile.jpg" 
+      alt="Seung Eun (Katy) Choi" 
+      style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover;" 
+    />
     <p>
       Ph.D. student in Civil & Environmental Engineering at the Georgia Institute of Technology<br />
       M.S. student in Computational Science & Engineering<br/>
@@ -118,17 +130,6 @@
       </p>
     </section>
 
-    <!-- ===== Research Interests Section ===== -->
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Driverless Taxis: Adoption &amp; Behavioral Intentions</li>
-        <li>Pre- to Post-Pandemic Telework &amp; Travel Behavior</li>
-        <li>Smart Mobility, On-Demand Services</li>
-        <li>Quantitative Modeling &amp; Data Analytics for Urban Planning</li>
-      </ul>
-    </section>
-
     <!-- ===== Publications Section ===== -->
     <section id="publications">
       <h2>Selected Publications</h2>
@@ -136,12 +137,12 @@
         <li>
           <strong>Soria, J., Choi, S.E.</strong>, Wang, X., Mokhtarian, P.L. (2025).
           “What kinds of people expect to travel by car more, or less, for non-commute purposes in the post-pandemic era?”
-          <em>Travel Behaviour and Society,</em> 40, 100986.
+          <em>Travel Behaviour and Society</em>, 40, 100986.
         </li>
         <li>
           <strong>Choi, S.E.</strong>, Kim, J., Seo, D. (2023).
           “Travel patterns of free-floating e-bike-sharing users before and during COVID-19 pandemic.” 
-          <em>Cities,</em> 132, 104065.
+          <em>Cities</em>, 132, 104065.
         </li>
       </ul>
     </section>
@@ -259,8 +260,9 @@
         <li><strong>Participation Award</strong>, Smart City Platform Idea Contest (Jul 2020)</li>
         <li><strong>Excellence Award</strong>, Smart City Platform Idea Contest (Jul 2020)</li>
         <li><strong>Excellence Award</strong>, The Smart Citizens Challenge (Dec 2019)</li>
-        <li><strong>Winner</strong>, Grand Challenge Ideathon at ITSWC (Oct 2019)
-        &nbsp;– <a href="https://youtu.be/n5IyFNzY6yM?t=46" target="_blank">Video highlight</a>
+        <li>
+          <strong>Winner</strong>, Grand Challenge Ideathon at ITSWC (Oct 2019)
+          &nbsp;– <a href="https://youtu.be/n5IyFNzY6yM?t=46" target="_blank">Youtube</a>
         </li>
       </ul>
     </section>
@@ -279,7 +281,7 @@
       <h2>Contact</h2>
       <p>
         Email: <a href="mailto:schoi473@gatech.edu">schoi473@gatech.edu</a><br/>
-        LinkedIn: <a href="https://www.linkedin.com/" target="_blank">LinkedIn.com/YourProfile</a>
+        LinkedIn: <a href="https://www.linkedin.com/in/seung-eun-katy-choi/">linkedin.com/in/seung-eun-katy-choi/</a>
       </p>
       <p>
         I’m always open to discussing research collaborations and/or interesting data sets. 
@@ -288,10 +290,4 @@
     </section>
   </main>
 
-  <footer>
-    &copy; 2025. Built by <strong>Seung Eun (Katy) Choi</strong> with 
-    <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. 
-  </footer>
-
-</body>
-</html>
+  <footer
