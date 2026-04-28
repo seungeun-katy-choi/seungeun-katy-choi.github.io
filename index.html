@@ -235,16 +235,20 @@
           <strong>M.S.</strong> · Computational Science &amp; Engineering<br>
           Georgia Institute of Technology 🐝🇺🇸<br>
           <br>
-          <strong>B.S.M.S.</strong> · Urban Planning &amp; Engineering<br>
+          <strong>B.S. &amp; M.S.</strong> · Urban Planning &amp; Engineering<br>
           Yonsei University 🦅🇰🇷
         </div>
         <p class="hero-tagline">"Passionate about understanding how cities move—literally and metaphorically."</p>
-        <div class="hero-links">
-          <button class="hero-btn secondary" onclick="show('updates')">📢 Updates</button><br>
-          <button class="hero-btn secondary" onclick="show('articles')">📰 In the News</button><br>
-          <button class="hero-btn secondary" onclick="show('skills')">💻 Skills</button><br>
-          <a class="hero-btn primary" href="mailto:schoi473@gatech.edu">✉️ Email Me</a>
-          <a class="hero-btn secondary" href="https://www.linkedin.com/in/seung-eun-katy-choi/" target="_blank">💼 LinkedIn</a>
+        <div class="hero-links" style="display:flex; flex-direction:column; align-items:flex-start; gap:0.8rem;">
+          <!-- Top buttons: stacked vertically -->
+          <button class="hero-btn secondary" onclick="show('updates')">📢 Updates</button>
+          <button class="hero-btn secondary" onclick="show('articles')">📰 In the News</button>
+          <button class="hero-btn secondary" onclick="show('skills')">💻 Skills</button>
+          <!-- Bottom row: Email + LinkedIn side by side -->
+          <div style="display:flex; gap:0.75rem; margin-top:0.8rem; flex-wrap:wrap;">
+            <a class="hero-btn primary" href="mailto:schoi473@gatech.edu">✉️ Email Me</a>
+            <a class="hero-btn secondary" href="https://www.linkedin.com/in/seung-eun-katy-choi/" target="_blank">💼 LinkedIn</a>
+          </div>
         </div>
       </div>
     </div>
