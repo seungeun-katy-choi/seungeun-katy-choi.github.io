@@ -209,16 +209,13 @@
   <div class="nav-brand">Katy Choi</div>
   <ul class="nav-links">
     <li><button class="active" onclick="show('home',this)">🏠 Home</button></li>
-    <li><button onclick="show('news',this)">📢 Updates</button></li>
     <li><button onclick="show('education',this)">🎓 Education</button></li>
     <li><button onclick="show('papers',this)">📄 Publications</button></li>
-    <li><button onclick="show('articles',this)">📰 In the News</button></li>
     <li><button onclick="show('presentations',this)">🎤 Presentations</button></li>
     <li><button onclick="show('research',this)">🔬 Research</button></li>
     <li><button onclick="show('teaching',this)">🏫 Teaching</button></li>
     <li><button onclick="show('activities',this)">🤝 Activities</button></li>
     <li><button onclick="show('awards',this)">🏆 Awards</button></li>
-    <li><button onclick="show('skills',this)">💻 Skills</button></li>
   </ul>
 </nav>
 
@@ -231,19 +228,23 @@
         <img class="hero-photo" src="katy_profile.jpg" alt="Seung Eun (Katy) Choi">
       </div>
       <div class="hero-text">
-        <p class="hero-eyebrow">Travel Behavior Researcher · Scholar · Educator</p>
+        <p class="hero-eyebrow">Travel Behavior Researcher</p>
         <h1 class="hero-name">Seung Eun<br><em>(Katy) Choi</em></h1>
         <p class="hero-aka">schoi473@gatech.edu</p>
         <div class="hero-affil">
           <strong>Ph.D. student</strong> · Civil &amp; Environmental Engineering<br>
-          <strong>M.S. student</strong> · Computational Science &amp; Engineering<br>
+          <strong>M.S.</strong> · Computational Science &amp; Engineering<br>
           Georgia Institute of Technology 🐝
+          <strong>M.S.</strong> · Urban Planning &amp; Engineering<br>
+          Yonsei University 🦅
         </div>
         <p class="hero-tagline">"Passionate about understanding how cities move—literally and metaphorically."</p>
         <div class="hero-links">
           <a class="hero-btn primary" href="mailto:schoi473@gatech.edu">✉️ Email Me</a>
           <a class="hero-btn secondary" href="https://www.linkedin.com/in/seung-eun-katy-choi/" target="_blank">💼 LinkedIn</a>
-          <button class="hero-btn secondary" onclick="show('papers', document.querySelectorAll('.nav-links button')[3])">📄 Publications</button>
+          <button class="hero-btn secondary" onclick="show('news',document.querySelectorAll('.nav-links button'))">📢 Updates</button></a>
+          <button class="hero-btn secondary" onclick="show('articles',document.querySelectorAll('.nav-links button'))">📰 In the News</button></a>
+          <button class="hero-btn secondary" onclick="show('skills',document.querySelectorAll('.nav-links button'))">💻 Skills</button>
         </div>
       </div>
     </div>
