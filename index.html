@@ -10,221 +10,65 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:    #1a1030;
-      --purple:  #7c4dab;
-      --lavender:#b48de2;
+      --navy:      #1a1030;
+      --purple:    #7c4dab;
+      --lavender:  #b48de2;
       --light-lav: #ede6f7;
-      --cream:   #f7f4fc;
-      --warm:    #e4d9f5;
-      --muted:   #8878a0;
-      --white:   #ffffff;
-      --card-bg: #fdfaff;
-      --shadow:  0 4px 32px rgba(26,16,48,0.10);
-      --radius:  12px;
+      --cream:     #f7f4fc;
+      --warm:      #e4d9f5;
+      --muted:     #8878a0;
+      --white:     #ffffff;
+      --card-bg:   #fdfaff;
+      --shadow:    0 4px 32px rgba(26,16,48,0.10);
+      --radius:    12px;
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--navy);
-      min-height: 100vh;
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); min-height: 100vh; }
 
     /* ── NAV ── */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: rgba(26,16,48,0.97);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(180,141,226,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.8rem; height: 58px; gap: 1rem;
     }
-
-    .nav-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      color: var(--lavender);
-      letter-spacing: 0.03em;
-      font-weight: 400;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 0.1rem;
-      list-style: none;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
+    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--lavender); letter-spacing: 0.03em; font-weight: 400; white-space: nowrap; flex-shrink: 0; }
+    .nav-links { display: flex; gap: 0; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
     .nav-links li button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: rgba(255,255,255,0.65);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.79rem;
-      font-weight: 400;
-      padding: 0.3rem 0.65rem;
-      border-radius: 6px;
-      transition: color 0.2s, background 0.2s;
-      letter-spacing: 0.01em;
-      white-space: nowrap;
+      background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,0.62); font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem; font-weight: 400; padding: 0.28rem 0.55rem;
+      border-radius: 6px; transition: color 0.2s, background 0.2s;
+      letter-spacing: 0.01em; white-space: nowrap;
     }
-
-    .nav-links li button:hover,
-    .nav-links li button.active {
-      color: var(--lavender);
-      background: rgba(180,141,226,0.12);
-    }
+    .nav-links li button:hover, .nav-links li button.active { color: var(--lavender); background: rgba(180,141,226,0.12); }
 
     /* ── HERO ── */
     .hero {
-      min-height: calc(100vh - 58px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+      min-height: calc(100vh - 58px); display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
       background: linear-gradient(135deg, #1a1030 0%, #2d1a50 55%, #1a1030 100%);
     }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 68% 38%, rgba(180,141,226,0.18) 0%, transparent 55%),
-        radial-gradient(ellipse at 18% 72%, rgba(124,77,171,0.12) 0%, transparent 50%);
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      background-size: 200px;
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 4.5rem;
-      max-width: 1000px;
-      width: 100%;
-      padding: 4rem 2.5rem;
-    }
-
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 68% 38%, rgba(180,141,226,0.18) 0%, transparent 55%), radial-gradient(ellipse at 18% 72%, rgba(124,77,171,0.12) 0%, transparent 50%); }
+    .hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); background-size: 200px; pointer-events: none; }
+    .hero-inner { position: relative; z-index: 1; display: flex; align-items: center; gap: 4.5rem; max-width: 1000px; width: 100%; padding: 4rem 2.5rem; }
     .hero-photo-wrap { flex-shrink: 0; }
-
-    .hero-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--lavender);
-      box-shadow: 0 0 0 8px rgba(180,141,226,0.15), 0 20px 60px rgba(0,0,0,0.5);
-      display: block;
-    }
-
-    .hero-photo-placeholder {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2d1a50, #4a2a80);
-      border: 3px solid var(--lavender);
-      box-shadow: 0 0 0 8px rgba(180,141,226,0.15), 0 20px 60px rgba(0,0,0,0.5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: rgba(180,141,226,0.6);
-      font-size: 0.7rem;
-      text-align: center;
-      gap: 0.4rem;
-    }
-
+    .hero-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--lavender); box-shadow: 0 0 0 8px rgba(180,141,226,0.15), 0 20px 60px rgba(0,0,0,0.5); display: block; }
+    .hero-photo-placeholder { width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, #2d1a50, #4a2a80); border: 3px solid var(--lavender); box-shadow: 0 0 0 8px rgba(180,141,226,0.15), 0 20px 60px rgba(0,0,0,0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; color: rgba(180,141,226,0.6); font-size: 0.7rem; text-align: center; gap: 0.4rem; }
     .hero-photo-placeholder svg { width: 42px; height: 42px; opacity: 0.55; }
-
     .hero-text { flex: 1; }
-
-    .hero-eyebrow {
-      font-size: 0.76rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--lavender);
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.6rem, 5vw, 4rem);
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.06;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-
+    .hero-eyebrow { font-size: 0.76rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lavender); margin-bottom: 0.9rem; }
+    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 300; color: var(--white); line-height: 1.06; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
     .hero-name em { font-style: italic; color: var(--lavender); }
-
-    .hero-aka {
-      font-size: 0.83rem;
-      color: rgba(255,255,255,0.42);
-      margin-bottom: 1rem;
-      font-weight: 300;
-      letter-spacing: 0.04em;
-    }
-
-    .hero-affil {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.68);
-      line-height: 1.7;
-      margin-bottom: 0.7rem;
-      font-weight: 300;
-    }
-
+    .hero-aka { font-size: 0.83rem; color: rgba(255,255,255,0.42); margin-bottom: 1rem; font-weight: 300; letter-spacing: 0.04em; }
+    .hero-affil { font-size: 0.88rem; color: rgba(255,255,255,0.68); line-height: 1.7; margin-bottom: 0.7rem; font-weight: 300; }
     .hero-affil strong { color: rgba(255,255,255,0.92); font-weight: 500; }
-
-    .hero-tagline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-style: italic;
-      color: rgba(255,255,255,0.52);
-      line-height: 1.65;
-      max-width: 420px;
-      font-weight: 300;
-      margin: 1rem 0 1.8rem;
-    }
-
+    .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: rgba(255,255,255,0.52); line-height: 1.65; max-width: 420px; font-weight: 300; margin: 1rem 0 1.8rem; }
     .hero-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-
-    .hero-btn {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.55rem 1.3rem;
-      border-radius: 50px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s;
-      letter-spacing: 0.04em;
-      border: 1.5px solid transparent;
-      display: inline-block;
-    }
-
+    .hero-btn { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; padding: 0.55rem 1.3rem; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.2s; letter-spacing: 0.04em; border: 1.5px solid transparent; display: inline-block; }
     .hero-btn.primary { background: var(--lavender); color: var(--navy); border-color: var(--lavender); }
     .hero-btn.primary:hover { background: #c9a8f0; transform: translateY(-1px); }
     .hero-btn.secondary { background: transparent; color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.22); }
@@ -233,387 +77,110 @@
     /* ── SECTIONS ── */
     .section { display: none; animation: fadeUp 0.38s ease both; }
     .section.active { display: block; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     .section-inner { max-width: 900px; margin: 0 auto; padding: 4.5rem 2.5rem; }
-
-    .section-header {
-      margin-bottom: 3rem;
-      border-bottom: 1px solid var(--warm);
-      padding-bottom: 1.2rem;
-      display: flex;
-      align-items: baseline;
-      gap: 0.7rem;
-    }
-
+    .section-header { margin-bottom: 3rem; border-bottom: 1px solid var(--warm); padding-bottom: 1.2rem; display: flex; align-items: baseline; gap: 0.7rem; }
     .section-emoji { font-size: 1.9rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 300; color: var(--navy); letter-spacing: -0.01em; }
 
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.9rem, 4vw, 2.6rem);
-      font-weight: 300;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-    }
+    /* Subsection label */
+    .sub-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 2.5rem 0 1.2rem; display: flex; align-items: center; gap: 0.8rem; }
+    .sub-label::after { content: ''; flex: 1; height: 1px; background: var(--warm); }
 
     /* ── CARDS ── */
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--warm);
-      border-radius: var(--radius);
-      padding: 1.6rem 1.8rem;
-      margin-bottom: 1.1rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: var(--lavender);
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-
+    .card { background: var(--card-bg); border: 1px solid var(--warm); border-radius: var(--radius); padding: 1.6rem 1.8rem; margin-bottom: 1.1rem; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; overflow: hidden; }
+    .card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--lavender); opacity: 0; transition: opacity 0.2s; }
     .card:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(26,16,48,0.13); border-color: var(--lavender); }
     .card:hover::before { opacity: 1; }
-
-    .card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 0.3rem;
-      line-height: 1.35;
-    }
-
-    .card-meta {
-      font-size: 0.75rem;
-      color: var(--purple);
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      margin-bottom: 0.55rem;
-    }
-
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; line-height: 1.35; }
+    .card-meta { font-size: 0.75rem; color: var(--purple); font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.55rem; }
     .card-body { font-size: 0.9rem; color: #4a4060; line-height: 1.72; font-weight: 300; }
     .card-body em { font-style: italic; }
     .card-body strong { font-weight: 500; color: var(--navy); }
-
-    .card-link {
-      display: inline-block;
-      margin-top: 0.8rem;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--navy);
-      text-decoration: none;
-      border-bottom: 1px solid var(--lavender);
-      padding-bottom: 1px;
-      transition: color 0.2s;
-    }
-
+    .card-link { display: inline-block; margin-top: 0.8rem; font-size: 0.78rem; font-weight: 500; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--lavender); padding-bottom: 1px; transition: color 0.2s; }
     .card-link:hover { color: var(--purple); }
-
-    /* ── EDUCATION TIMELINE ── */
-    .timeline { list-style: none; }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 115px 1fr;
-      gap: 0 2.2rem;
-      margin-bottom: 2.4rem;
-      position: relative;
-    }
-
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      left: 128px;
-      top: 26px;
-      bottom: -2.4rem;
-      width: 1px;
-      background: var(--warm);
-    }
-
-    .timeline-item:last-child::after { display: none; }
-
-    .timeline-year {
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--purple);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding-top: 0.2rem;
-      text-align: right;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: 122px;
-      top: 7px;
-      width: 12px; height: 12px;
-      border-radius: 50%;
-      background: var(--lavender);
-      border: 2px solid var(--cream);
-      box-shadow: 0 0 0 2px var(--lavender);
-    }
-
-    .timeline-content .degree {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 0.2rem;
-    }
-
-    .timeline-content .institution { font-size: 0.86rem; color: var(--purple); font-weight: 400; margin-bottom: 0.4rem; }
-    .timeline-content .desc { font-size: 0.87rem; color: #5a5070; line-height: 1.65; font-weight: 300; }
-
-    /* ── AWARDS GRID ── */
-    .awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.1rem; }
-
-    .award-card {
-      background: var(--card-bg);
-      border: 1px solid var(--warm);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      text-align: center;
-    }
-
-    .award-card:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(26,16,48,0.13); border-color: var(--lavender); }
-
-    .award-icon { font-size: 1.9rem; margin-bottom: 0.7rem; }
-
-    .award-title { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; line-height: 1.3; }
-    .award-body { font-size: 0.8rem; color: var(--muted); font-weight: 300; line-height: 1.6; }
-    .award-year { display: inline-block; margin-top: 0.65rem; font-size: 0.7rem; font-weight: 500; color: var(--purple); letter-spacing: 0.08em; text-transform: uppercase; }
-
-    .award-link { display: block; margin-top: 0.5rem; font-size: 0.75rem; color: var(--lavender); text-decoration: none; font-weight: 500; }
-    .award-link:hover { color: var(--purple); }
-
-    /* ── SKILLS ── */
-    .skills-tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
-    .skill-tag { background: var(--light-lav); color: var(--purple); font-size: 0.8rem; font-weight: 500; padding: 0.32rem 0.85rem; border-radius: 50px; border: 1px solid var(--warm); }
-
-    .skills-divider {
-      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 1.8rem; display: flex; align-items: center; gap: 1rem;
-    }
-    .skills-divider::after { content: ''; flex: 1; height: 1px; background: var(--warm); }
-
-    .skills-icon-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.2rem 1.5rem;
-      max-width: 520px;
-    }
-
-    .skill-icon-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.65rem;
-    }
-
-    .skill-icon-box {
-      width: 82px;
-      height: 82px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 18px rgba(26,16,48,0.13);
-      transition: transform 0.2s, box-shadow 0.2s;
-      overflow: hidden;
-    }
-
-    .skill-icon-box:hover {
-      transform: translateY(-4px) scale(1.06);
-      box-shadow: 0 10px 28px rgba(26,16,48,0.2);
-    }
-
-    .skill-icon-box img { width: 54px; height: 54px; object-fit: contain; }
-
-    .skill-icon-letter {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1;
-      text-align: center;
-    }
-
-    .skill-icon-label {
-      font-size: 0.78rem;
-      color: var(--muted);
-      font-weight: 400;
-      text-align: center;
-      letter-spacing: 0.01em;
-    }
 
     /* ── NEWS FEED ── */
     .news-feed { list-style: none; }
-
-    .news-item {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 0 1.8rem;
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--warm);
-      align-items: baseline;
-    }
-
+    .news-item { display: grid; grid-template-columns: 90px 1fr; gap: 0 1.8rem; padding: 1.1rem 0; border-bottom: 1px solid var(--warm); align-items: baseline; }
     .news-item:first-child { padding-top: 0; }
     .news-item:last-child { border-bottom: none; }
-
-    .news-date {
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--lavender);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding-top: 0.1rem;
-      white-space: nowrap;
-    }
-
-    .news-badge {
-      display: inline-block;
-      font-size: 0.67rem;
-      font-weight: 500;
-      padding: 0.18rem 0.55rem;
-      border-radius: 50px;
-      margin-right: 0.5rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      vertical-align: middle;
-    }
-
+    .news-date { font-size: 0.72rem; font-weight: 500; color: var(--lavender); letter-spacing: 0.06em; text-transform: uppercase; padding-top: 0.1rem; white-space: nowrap; }
+    .news-badge { display: inline-block; font-size: 0.67rem; font-weight: 500; padding: 0.18rem 0.55rem; border-radius: 50px; margin-right: 0.5rem; letter-spacing: 0.05em; text-transform: uppercase; vertical-align: middle; }
     .badge-pub    { background: #e8f4e8; color: #2d7a2d; border: 1px solid #c8e8c8; }
     .badge-talk   { background: #e8eef8; color: #2d4d8a; border: 1px solid #c8d8f0; }
     .badge-award  { background: #fef8e8; color: #8a6a10; border: 1px solid #f0e0a0; }
     .badge-news   { background: var(--light-lav); color: var(--purple); border: 1px solid var(--warm); }
     .badge-service{ background: #f8eef8; color: #7a2d7a; border: 1px solid #e8c8e8; }
-
-    .news-text {
-      font-size: 0.92rem;
-      color: #4a4060;
-      line-height: 1.65;
-      font-weight: 300;
-    }
-
+    .badge-fellow { background: #e8f8f4; color: #1a7a5a; border: 1px solid #b8e8d8; }
+    .news-text { font-size: 0.92rem; color: #4a4060; line-height: 1.65; font-weight: 300; }
     .news-text strong { font-weight: 500; color: var(--navy); }
     .news-text em { font-style: italic; }
 
+    /* ── EDUCATION TIMELINE ── */
+    .timeline { list-style: none; }
+    .timeline-item { display: grid; grid-template-columns: 115px 1fr; gap: 0 2.2rem; margin-bottom: 2.4rem; position: relative; }
+    .timeline-item::after { content: ''; position: absolute; left: 128px; top: 26px; bottom: -2.4rem; width: 1px; background: var(--warm); }
+    .timeline-item:last-child::after { display: none; }
+    .timeline-year { font-size: 0.72rem; font-weight: 500; color: var(--purple); letter-spacing: 0.06em; text-transform: uppercase; padding-top: 0.2rem; text-align: right; }
+    .timeline-dot { position: absolute; left: 122px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--lavender); border: 2px solid var(--cream); box-shadow: 0 0 0 2px var(--lavender); }
+    .timeline-content .degree { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--navy); margin-bottom: 0.2rem; }
+    .timeline-content .institution { font-size: 0.86rem; color: var(--purple); font-weight: 400; margin-bottom: 0.4rem; }
+    .timeline-content .desc { font-size: 0.87rem; color: #5a5070; line-height: 1.65; font-weight: 300; }
+
+    /* ── AWARDS ── */
+    .awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.1rem; }
+    .award-card { background: var(--card-bg); border: 1px solid var(--warm); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; text-align: center; }
+    .award-card:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(26,16,48,0.13); border-color: var(--lavender); }
+    .award-icon { font-size: 1.9rem; margin-bottom: 0.7rem; }
+    .award-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; line-height: 1.3; }
+    .award-body { font-size: 0.78rem; color: var(--muted); font-weight: 300; line-height: 1.6; }
+    .award-year { display: inline-block; margin-top: 0.65rem; font-size: 0.7rem; font-weight: 500; color: var(--purple); letter-spacing: 0.08em; text-transform: uppercase; }
+    .award-link { display: block; margin-top: 0.5rem; font-size: 0.75rem; color: var(--lavender); text-decoration: none; font-weight: 500; }
+    .award-link:hover { color: var(--purple); }
+
+    /* Fellow cards (horizontal) */
+    .fellow-card { background: var(--card-bg); border: 1px solid var(--warm); border-radius: var(--radius); padding: 1.2rem 1.6rem; margin-bottom: 0.9rem; box-shadow: var(--shadow); display: flex; align-items: center; gap: 1.2rem; transition: transform 0.2s, border-color 0.2s; }
+    .fellow-card:hover { transform: translateY(-2px); border-color: var(--lavender); }
+    .fellow-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .fellow-title { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; font-weight: 600; color: var(--navy); margin-bottom: 0.15rem; }
+    .fellow-meta { font-size: 0.8rem; color: var(--purple); font-weight: 400; }
+
     /* ── ARTICLES / PRESS ── */
-    .article-card {
-      background: var(--card-bg);
-      border: 1px solid var(--warm);
-      border-radius: var(--radius);
-      padding: 1.5rem 1.8rem;
-      margin-bottom: 1.1rem;
-      box-shadow: var(--shadow);
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .article-card::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: var(--lavender);
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-
+    .article-card { background: var(--card-bg); border: 1px solid var(--warm); border-radius: var(--radius); padding: 1.5rem 1.8rem; margin-bottom: 1.1rem; box-shadow: var(--shadow); display: flex; gap: 1.2rem; align-items: flex-start; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; overflow: hidden; }
+    .article-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--lavender); opacity: 0; transition: opacity 0.2s; }
     .article-card:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(26,16,48,0.13); border-color: var(--lavender); }
     .article-card:hover::before { opacity: 1; }
-
-    .article-outlet {
-      flex-shrink: 0;
-      width: 52px;
-      height: 52px;
-      border-radius: 10px;
-      background: var(--light-lav);
-      border: 1px solid var(--warm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-    }
-
+    .article-outlet { flex-shrink: 0; width: 52px; height: 52px; border-radius: 10px; background: var(--light-lav); border: 1px solid var(--warm); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
     .article-content { flex: 1; }
-
-    .article-meta {
-      font-size: 0.73rem;
-      color: var(--purple);
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      margin-bottom: 0.3rem;
-    }
-
-    .article-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.35;
-      margin-bottom: 0.4rem;
-    }
-
-    .article-desc {
-      font-size: 0.88rem;
-      color: #5a5070;
-      line-height: 1.65;
-      font-weight: 300;
-      margin-bottom: 0.5rem;
-    }
-
-    .article-cite-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 500;
-      padding: 0.18rem 0.6rem;
-      border-radius: 50px;
-      margin-right: 0.4rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
+    .article-meta { font-size: 0.73rem; color: var(--purple); font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .article-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--navy); line-height: 1.35; margin-bottom: 0.4rem; }
+    .article-desc { font-size: 0.88rem; color: #5a5070; line-height: 1.65; font-weight: 300; margin-bottom: 0.5rem; }
+    .article-cite-tag { display: inline-block; font-size: 0.68rem; font-weight: 500; padding: 0.18rem 0.6rem; border-radius: 50px; margin-right: 0.4rem; letter-spacing: 0.05em; text-transform: uppercase; }
     .cite-direct   { background: #e8f0fe; color: #1a4fb8; border: 1px solid #c8d8f8; }
     .cite-indirect { background: var(--light-lav); color: var(--purple); border: 1px solid var(--warm); }
-    .activity-item {
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-      padding: 1.3rem 1.5rem;
-      background: var(--card-bg);
-      border: 1px solid var(--warm);
-      border-radius: var(--radius);
-      margin-bottom: 1rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s, border-color 0.2s;
-    }
 
+    /* ── ACTIVITIES ── */
+    .activity-item { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--warm); border-radius: var(--radius); margin-bottom: 1rem; box-shadow: var(--shadow); transition: transform 0.2s, border-color 0.2s; }
     .activity-item:hover { transform: translateY(-2px); border-color: var(--lavender); }
     .activity-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 0.1rem; }
     .activity-role { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.15rem; }
     .activity-org { font-size: 0.83rem; color: var(--purple); font-weight: 500; margin-bottom: 0.2rem; }
     .activity-period { font-size: 0.78rem; color: var(--muted); font-weight: 300; }
+    .activity-desc { font-size: 0.84rem; color: #5a5070; line-height: 1.6; font-weight: 300; margin-top: 0.3rem; }
+
+    /* ── SKILLS ── */
+    .skills-tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .skill-tag { background: var(--light-lav); color: var(--purple); font-size: 0.8rem; font-weight: 500; padding: 0.32rem 0.85rem; border-radius: 50px; border: 1px solid var(--warm); }
+    .skills-divider { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.8rem; display: flex; align-items: center; gap: 1rem; }
+    .skills-divider::after { content: ''; flex: 1; height: 1px; background: var(--warm); }
+    .skills-icon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2rem 1.5rem; max-width: 520px; }
+    .skill-icon-item { display: flex; flex-direction: column; align-items: center; gap: 0.65rem; }
+    .skill-icon-box { width: 82px; height: 82px; border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(26,16,48,0.13); transition: transform 0.2s, box-shadow 0.2s; overflow: hidden; }
+    .skill-icon-box:hover { transform: translateY(-4px) scale(1.06); box-shadow: 0 10px 28px rgba(26,16,48,0.2); }
+    .skill-icon-box img { width: 54px; height: 54px; object-fit: contain; }
+    .skill-icon-letter { font-family: 'DM Sans', sans-serif; font-weight: 700; color: #fff; line-height: 1; text-align: center; }
+    .skill-icon-label { font-size: 0.78rem; color: var(--muted); font-weight: 400; text-align: center; }
 
     /* ── FOOTER ── */
     footer { background: var(--navy); color: rgba(255,255,255,0.38); text-align: center; padding: 1.5rem 1rem; font-size: 0.77rem; font-weight: 300; letter-spacing: 0.04em; }
@@ -625,47 +192,44 @@
       .hero-inner { flex-direction: column; text-align: center; gap: 2rem; }
       .hero-tagline, .hero-affil { margin-left: auto; margin-right: auto; }
       .hero-links { justify-content: center; }
-      nav { padding: 0 0.8rem; }
+      nav { padding: 0 0.6rem; }
       .nav-brand { display: none; }
-      .nav-links li button { font-size: 0.68rem; padding: 0.25rem 0.45rem; }
+      .nav-links li button { font-size: 0.65rem; padding: 0.22rem 0.4rem; }
       .timeline-item { grid-template-columns: 75px 1fr; }
       .timeline-item::after { left: 88px; }
       .timeline-dot { left: 82px; }
       .section-inner { padding: 3rem 1.2rem; }
+      .article-card { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAVIGATION ── -->
 <nav>
   <div class="nav-brand">Katy Choi</div>
   <ul class="nav-links">
-    <li><button class="active" onclick="show('home', this)">🏠 Home</button></li>
-    <li><button onclick="show('news', this)">📢 News</button></li>
-    <li><button onclick="show('education', this)">🎓 Education</button></li>
-    <li><button onclick="show('papers', this)">📄 Publications</button></li>
-    <li><button onclick="show('articles', this)">📰 Articles</button></li>
-    <li><button onclick="show('presentations', this)">🎤 Presentations</button></li>
-    <li><button onclick="show('research', this)">🔬 Research</button></li>
-    <li><button onclick="show('teaching', this)">🏫 Teaching</button></li>
-    <li><button onclick="show('activities', this)">🤝 Activities</button></li>
-    <li><button onclick="show('awards', this)">🏆 Awards</button></li>
-    <li><button onclick="show('skills', this)">💻 Skills</button></li>
+    <li><button class="active" onclick="show('home',this)">🏠 Home</button></li>
+    <li><button onclick="show('news',this)">📢 News</button></li>
+    <li><button onclick="show('education',this)">🎓 Education</button></li>
+    <li><button onclick="show('papers',this)">📄 Publications</button></li>
+    <li><button onclick="show('articles',this)">📰 Articles</button></li>
+    <li><button onclick="show('presentations',this)">🎤 Presentations</button></li>
+    <li><button onclick="show('research',this)">🔬 Research</button></li>
+    <li><button onclick="show('teaching',this)">🏫 Teaching</button></li>
+    <li><button onclick="show('activities',this)">🤝 Activities</button></li>
+    <li><button onclick="show('awards',this)">🏆 Awards</button></li>
+    <li><button onclick="show('skills',this)">💻 Skills</button></li>
   </ul>
 </nav>
 
-<!-- ══════════════════ HOME ══════════════════ -->
+<!-- ════════════════════════════════════════════════ HOME -->
 <section id="home" class="section active">
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-photo-wrap">
         <!-- Replace with: <img class="hero-photo" src="katy_profile.jpg" alt="Katy Choi"> -->
         <div class="hero-photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <circle cx="12" cy="8" r="4"/>
-            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
           <span>Add katy_profile.jpg</span>
         </div>
       </div>
@@ -676,119 +240,103 @@
         <div class="hero-affil">
           <strong>Ph.D. student</strong> · Civil &amp; Environmental Engineering<br>
           <strong>M.S. student</strong> · Computational Science &amp; Engineering<br>
-          Georgia Institute of Technology
+          Georgia Institute of Technology 🐝
         </div>
         <p class="hero-tagline">"Passionate about understanding how cities move—literally and metaphorically."</p>
         <div class="hero-links">
           <a class="hero-btn primary" href="mailto:schoi473@gatech.edu">✉️ Email Me</a>
           <a class="hero-btn secondary" href="https://www.linkedin.com/in/seung-eun-katy-choi/" target="_blank">💼 LinkedIn</a>
-          <button class="hero-btn secondary" onclick="show('papers', document.querySelectorAll('.nav-links button')[2])">📄 Publications</button>
+          <button class="hero-btn secondary" onclick="show('papers', document.querySelectorAll('.nav-links button')[3])">📄 Publications</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════ NEWS ══════════════════ -->
+<!-- ════════════════════════════════════════════════ NEWS -->
 <section id="news" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">📢</span>
-      <h2 class="section-title">News</h2>
-    </div>
+    <div class="section-header"><span class="section-emoji">📢</span><h2 class="section-title">News</h2></div>
     <ul class="news-feed">
 
       <li class="news-item">
+        <span class="news-date">May 2026</span>
+        <span class="news-text"><span class="news-badge badge-award">Award</span>Received the <strong>GT6000 Group Leader of the Year</strong> award for outstanding course leadership of Fall 2025 Section 32, Georgia Institute of Technology.</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">Feb 2026</span>
+        <span class="news-text"><span class="news-badge badge-award">Award</span>Named to the <strong>CIOS Honor Roll</strong> — recognized for Outstanding Course Leadership (Fall 2025 GT6000 Section 32) by the Center for Teaching and Learning at Georgia Tech.</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">Jan 2026</span>
+        <span class="news-text"><span class="news-badge badge-fellow">Fellowship</span>Selected as a recipient of the <strong>CEE Future Faculty Fellowship</strong>, Georgia Institute of Technology.</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">Jan 2026</span>
+        <span class="news-text"><span class="news-badge badge-talk">Talk</span>Presented at <strong>2026 TRB Annual Meeting</strong>, Washington D.C. — "Understanding Robotaxi Adoption Among Workers in Three US Metropolitan Regions: Using a Zero-Inflated Ordered Probit Model with Correlated Errors (ZIOPC)".</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">2026</span>
+        <span class="news-text"><span class="news-badge badge-pub">Publication</span>New paper published: "How has the importance of factors influencing telework adoption changed over time? Observing pre- to late-pandemic trends using multi-year data from two US regions." <em>Travel Behaviour and Society</em> 44, 101233.</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">Oct 2025</span>
+        <span class="news-text"><span class="news-badge badge-talk">Talk</span>Presented "Understanding driverless taxi adoption and its impacts on travel behavior" at the <strong>2025 ACSP 65th Annual Conference</strong>, Minneapolis, MN.</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">Sep 2025</span>
+        <span class="news-text"><span class="news-badge badge-fellow">Fellowship</span>Received the <strong>CEE GLAD Fellowship</strong> and began the <strong>Graduate Leadership Academy (GLAD)</strong> program at Georgia Tech.</span>
+      </li>
+
+      <li class="news-item">
         <span class="news-date">2025</span>
-        <span class="news-text">
-          <span class="news-badge badge-pub">Publication</span>
-          Paper published in <em>Travel Behaviour and Society</em> — "What kinds of people expect to travel by car more, or less, for non-commute purposes in the post-pandemic era?" (with Soria, Wang, Mokhtarian).
-        </span>
+        <span class="news-text"><span class="news-badge badge-pub">Publication</span>Paper published — "What kinds of people expect to travel by car more, or less, for non-commute purposes in the post-pandemic era?" <em>Travel Behaviour and Society</em> 40, 100986.</span>
       </li>
 
       <li class="news-item">
         <span class="news-date">Jan 2025</span>
-        <span class="news-text">
-          <span class="news-badge badge-talk">Talk</span>
-          Presented at the <strong>2025 TRB Annual Meeting</strong>, Washington D.C. — "How Has the Importance of Factors Influencing Telework Adoption Changed Over Time?"
-        </span>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">2025</span>
-        <span class="news-text">
-          <span class="news-badge badge-talk">Accepted</span>
-          Paper accepted for the <strong>2025 International Conference on Transport Survey Methods</strong>, Danang, Vietnam.
-        </span>
+        <span class="news-text"><span class="news-badge badge-talk">Talk</span>Presented at <strong>2025 TRB 104th Annual Meeting</strong>, Washington D.C. — "How Has the Importance of Factors Influencing Telework Adoption Changed Over Time?"</span>
       </li>
 
       <li class="news-item">
         <span class="news-date">2024</span>
-        <span class="news-text">
-          <span class="news-badge badge-talk">Talk</span>
-          Presented "How temporally stable are attitudes? It depends" at the <strong>3rd Symposium on Activity-Based Modeling</strong>, Raitenhaslach, Germany.
-        </span>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">May 2024</span>
-        <span class="news-text">
-          <span class="news-badge badge-service">Service</span>
-          Continuing to serve as <strong>External Affairs Officer</strong> at the ITE Georgia Tech Student Chapter.
-        </span>
+        <span class="news-text"><span class="news-badge badge-talk">Talk</span>Presented "How temporally stable are attitudes? It depends" at the <strong>3rd Symposium on Activity-Based Modeling</strong>, Raitenhaslach, Germany.</span>
       </li>
 
       <li class="news-item">
         <span class="news-date">Jan 2024</span>
-        <span class="news-text">
-          <span class="news-badge badge-talk">Talk</span>
-          Presented at the <strong>2024 TRB Annual Meeting</strong>, Washington D.C. — "Exploring the influences on late-pandemic non-commute activity engagement."
-        </span>
+        <span class="news-text"><span class="news-badge badge-talk">Talk</span>Presented at the <strong>2024 TRB 103rd Annual Meeting</strong>, Washington D.C. — "Exploring the influences on late-pandemic non-commute activity engagement."</span>
       </li>
 
       <li class="news-item">
         <span class="news-date">2023</span>
-        <span class="news-text">
-          <span class="news-badge badge-pub">Publication</span>
-          Paper published in <em>Cities</em> — "Travel patterns of free-floating e-bike-sharing users before and during COVID-19 pandemic."
-        </span>
+        <span class="news-text"><span class="news-badge badge-pub">Publication</span>Paper published in <em>Cities</em> 132, 104065 — "Travel patterns of free-floating e-bike-sharing users before and during COVID-19 pandemic."</span>
       </li>
 
       <li class="news-item">
         <span class="news-date">May 2023</span>
-        <span class="news-text">
-          <span class="news-badge badge-service">Service</span>
-          Elected <strong>Vice-President</strong> of the WTS (Women's Transportation Seminar) Georgia Tech Student Chapter.
-        </span>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">Sep 2021</span>
-        <span class="news-text">
-          <span class="news-badge badge-award">Award</span>
-          Received the <strong>KRIHS Award</strong> from the Korea Research Institute for Human Settlements.
-        </span>
+        <span class="news-text"><span class="news-badge badge-service">Service</span>Elected <strong>Vice-President</strong> of the WTS (Women's Transportation Seminar) Georgia Tech Student Chapter.</span>
       </li>
 
       <li class="news-item">
         <span class="news-date">Oct 2019</span>
-        <span class="news-text">
-          <span class="news-badge badge-award">Award</span>
-          <strong>Won</strong> the Grand Challenge Ideathon at ITSWC (ITS World Congress) — international smart mobility competition.
-        </span>
+        <span class="news-text"><span class="news-badge badge-award">Award</span><strong>Won</strong> the Grand Challenge Ideathon at <strong>ITSWC</strong> (ITS World Congress), Singapore — featured in a CNA news segment.</span>
       </li>
 
     </ul>
   </div>
 </section>
 
-<!-- ══════════════════ EDUCATION ══════════════════ -->
+<!-- ════════════════════════════════════════════════ EDUCATION -->
 <section id="education" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">🎓</span>
-      <h2 class="section-title">Education</h2>
-    </div>
+    <div class="section-header"><span class="section-emoji">🎓</span><h2 class="section-title">Education</h2></div>
     <ul class="timeline">
 
       <li class="timeline-item">
@@ -796,38 +344,48 @@
         <span class="timeline-dot"></span>
         <div class="timeline-content">
           <div class="degree">Ph.D. in Civil &amp; Environmental Engineering</div>
-          <div class="institution">Georgia Institute of Technology, Atlanta, GA</div>
-          <div class="desc">Travel behavior modeling, telework, shared mobility, and autonomous vehicles. Advisor: Prof. Patricia L. Mokhtarian.</div>
+          <div class="institution">Georgia Institute of Technology · Atlanta, GA</div>
+          <div class="desc">Travel behavior modeling, telework, autonomous vehicles, and shared mobility. Advisor: Prof. Patricia L. Mokhtarian.</div>
         </div>
       </li>
 
       <li class="timeline-item">
-        <span class="timeline-year">2022 – Present</span>
+        <span class="timeline-year">2023 – 2025</span>
         <span class="timeline-dot"></span>
         <div class="timeline-content">
           <div class="degree">M.S. in Computational Science &amp; Engineering</div>
-          <div class="institution">Georgia Institute of Technology, Atlanta, GA</div>
-          <div class="desc">Concurrent degree combining transportation theory with advanced data analytics and machine learning.</div>
+          <div class="institution">Georgia Institute of Technology · Atlanta, GA</div>
+          <div class="desc">Concurrent degree combining transportation theory with advanced data analytics and machine learning methods.</div>
         </div>
       </li>
 
       <li class="timeline-item">
-        <span class="timeline-year">2019 – 2022</span>
+        <span class="timeline-year">2020 – 2022</span>
         <span class="timeline-dot"></span>
         <div class="timeline-content">
           <div class="degree">M.S. in Urban Planning &amp; Engineering</div>
-          <div class="institution">Yonsei University, Seoul, South Korea</div>
-          <div class="desc">Research on e-bike sharing travel behavior and the impacts of COVID-19 on urban mobility.</div>
+          <div class="institution">Yonsei University · Seoul, South Korea</div>
+          <div class="desc">Joint Degree Program in Smart City. Research on e-bike sharing travel behavior and COVID-19 impacts on urban mobility.</div>
         </div>
       </li>
 
       <li class="timeline-item">
-        <span class="timeline-year">2015 – 2019</span>
+        <span class="timeline-year">2016 – 2020</span>
         <span class="timeline-dot"></span>
         <div class="timeline-content">
-          <div class="degree">B.A. in Urban Planning &amp; Engineering</div>
-          <div class="institution">Yonsei University, Seoul, South Korea</div>
+          <div class="degree">B.A. in Urban Planning &amp; Engineering <span style="font-size:0.8rem; color:var(--lavender); font-weight:400;">· Magna Cum Laude</span></div>
+          <div class="institution">Yonsei University · Seoul, South Korea</div>
           <div class="desc">Foundation in urban systems, transport planning, and spatial analysis.</div>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <span class="timeline-year">2017 – 2018</span>
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <div class="degree">Exchange Student · Civil Engineering</div>
+          <div class="institution">University of California, Davis · Davis, CA</div>
+          <div class="desc">International exchange program during undergraduate studies.</div>
         </div>
       </li>
 
@@ -835,17 +393,21 @@
   </div>
 </section>
 
-<!-- ══════════════════ PUBLICATIONS ══════════════════ -->
+<!-- ════════════════════════════════════════════════ PUBLICATIONS -->
 <section id="papers" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">📄</span>
-      <h2 class="section-title">Publications</h2>
+    <div class="section-header"><span class="section-emoji">📄</span><h2 class="section-title">Publications</h2></div>
+
+    <div class="card">
+      <div class="card-meta">Travel Behaviour and Society · 2026</div>
+      <div class="card-title">How has the importance of factors influencing telework adoption changed over time? Observing pre- to late-pandemic trends using multi-year data from two US regions</div>
+      <div class="card-body"><strong>Choi, S.E.</strong>, Kim, I., Wang, X., Soria, J., Mokhtarian, P.L. <em>Travel Behaviour and Society</em>, 44, 101233.</div>
+      <a class="card-link" href="#" target="_blank">View paper →</a>
     </div>
 
     <div class="card">
       <div class="card-meta">Travel Behaviour and Society · 2025</div>
-      <div class="card-title">What kinds of people expect to travel by car more, or less, for non-commute purposes in the post-pandemic era?</div>
+      <div class="card-title">What kinds of people expect to travel by car more, or less, for non-commute purposes in the post-pandemic era? A latent class approach</div>
       <div class="card-body">Soria, J., <strong>Choi, S.E.</strong>, Wang, X., Mokhtarian, P.L. <em>Travel Behaviour and Society</em>, 40, 100986.</div>
       <a class="card-link" href="#" target="_blank">View paper →</a>
     </div>
@@ -860,66 +422,66 @@
   </div>
 </section>
 
-<!-- ══════════════════ ARTICLES & PRESS ══════════════════ -->
+<!-- ════════════════════════════════════════════════ ARTICLES & PRESS -->
 <section id="articles" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">📰</span>
-      <h2 class="section-title">Articles &amp; Press</h2>
-    </div>
+    <div class="section-header"><span class="section-emoji">📰</span><h2 class="section-title">Articles &amp; Press</h2></div>
 
     <p style="font-size:0.88rem; color:var(--muted); font-weight:300; margin-bottom:2rem; line-height:1.65;">
-      News articles, media features, and online publications where my research is directly cited or indirectly referenced.
-      Tags indicate the nature of the citation.
+      Online news articles, media features, and publications where my research or work is directly cited or referenced.
     </p>
 
-    <!-- ✏️ DIRECT CITATION EXAMPLE — replace with your real articles -->
     <div class="article-card">
-      <div class="article-outlet">🗞️</div>
+      <div class="article-outlet">🚖</div>
       <div class="article-content">
-        <div class="article-meta">Outlet Name · Month Year</div>
-        <div class="article-title">Article Headline That Directly Cites Your Research</div>
-        <div class="article-desc">
-          Brief description of what the article covers and how your work or name appears. Include any relevant quote or context about how your research contributed to the story.
-        </div>
-        <span class="article-cite-tag cite-direct">Direct Citation</span>
-        <a class="card-link" href="#" target="_blank">Read article →</a>
+        <div class="article-meta">Axios Atlanta · April 28, 2026</div>
+        <div class="article-title">College Park transit pilot: autonomous vehicles, ATL airport, and the MARTA gap solution</div>
+        <div class="article-desc">Coverage of the autonomous transit pilot near Hartsfield-Jackson Airport — directly connected to my ongoing robotaxi adoption and autonomous vehicle travel behavior research with Cintra/Ferrovial and Georgia Tech.</div>
+        <span class="article-cite-tag cite-indirect">Research Context</span>
+        <a class="card-link" href="https://www.axios.com/local/atlanta/2026/04/28/college-park-transit-pilot-autonomous-vehicles-atl-airport-marta-gap-solution" target="_blank">Read article →</a>
       </div>
     </div>
 
-    <!-- ✏️ INDIRECT CITATION EXAMPLE -->
     <div class="article-card">
-      <div class="article-outlet">📡</div>
+      <div class="article-outlet">🏢</div>
       <div class="article-content">
-        <div class="article-meta">Outlet Name · Month Year</div>
-        <div class="article-title">Article That References Your Research Area or Findings</div>
-        <div class="article-desc">
-          Description of the article and how your work informed the topic, even if not explicitly named. For example, if your telework research contributed to a broader policy discussion covered in this piece.
-        </div>
-        <span class="article-cite-tag cite-indirect">Indirect Reference</span>
-        <a class="card-link" href="#" target="_blank">Read article →</a>
+        <div class="article-meta">Ferrovial Newsroom · January 2026</div>
+        <div class="article-title">Understanding the Road Ahead: What Robotaxi Riders Tell Us</div>
+        <div class="article-desc">Ferrovial's (Cintra) newsroom article based on the robotaxi adoption survey I designed and conducted across four major US metropolitan areas (Phoenix, San Francisco, Los Angeles, and Austin) as part of my doctoral research.</div>
+        <span class="article-cite-tag cite-direct">Research Featured</span>
+        <a class="card-link" href="https://newsroom.ferrovial.com/en-us/articles/understanding-the-road-ahead/" target="_blank">Read article →</a>
       </div>
     </div>
 
-    <!-- ✏️ Add more article cards here using the same pattern above -->
-    <!-- 
-      To add a new article, copy one of the blocks above and fill in:
-      - article-meta: Outlet name · Date
-      - article-title: The article headline
-      - article-desc: Description of how you're cited
-      - cite-direct or cite-indirect class on the tag
-      - href on the card-link with the URL
-    -->
+    <div class="article-card">
+      <div class="article-outlet">🌐</div>
+      <div class="article-content">
+        <div class="article-meta">IRF (International Road Federation) · December 2019</div>
+        <div class="article-title">First Intelligent Transport Systems World Congress Held in Southeast Asia Comes to a Successful Close</div>
+        <div class="article-desc">Coverage of the ITSWC 2019 held in Singapore, where I won the Grand Challenge Ideathon with my team's proposal on an IoT-enabled smart wristband for elderly people with dementia.</div>
+        <span class="article-cite-tag cite-direct">Direct Mention</span>
+        <a class="card-link" href="https://irfofficial.org/2019/12/20/first-intelligent-transport-systems-world-congress-held-in-southeast-asia-comes-to-a-successful-close/" target="_blank">Read article →</a>
+      </div>
+    </div>
 
   </div>
 </section>
 
-<!-- ══════════════════ PRESENTATIONS ══════════════════ -->
+<!-- ════════════════════════════════════════════════ PRESENTATIONS -->
 <section id="presentations" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">🎤</span>
-      <h2 class="section-title">Presentations</h2>
+    <div class="section-header"><span class="section-emoji">🎤</span><h2 class="section-title">Presentations</h2></div>
+
+    <div class="card">
+      <div class="card-meta">2026 TRB Annual Meeting · Washington, D.C.</div>
+      <div class="card-title">Understanding Robotaxi Adoption Among Workers in Three US Metropolitan Regions: Using a Zero-Inflated Ordered Probit Model with Correlated Errors (ZIOPC)</div>
+      <div class="card-body"><strong>Choi, S.E.</strong>, Mokhtarian, P.L.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">2025 ACSP 65th Annual Conference · Minneapolis, MN</div>
+      <div class="card-title">Understanding driverless taxi adoption and its impacts on travel behavior</div>
+      <div class="card-body"><strong>Choi, S.E.</strong>, Mokhtarian, P.L.</div>
     </div>
 
     <div class="card">
@@ -929,7 +491,7 @@
     </div>
 
     <div class="card">
-      <div class="card-meta">2025 TRB Annual Meeting · Washington, D.C.</div>
+      <div class="card-meta">2025 TRB 104th Annual Meeting · Washington, D.C.</div>
       <div class="card-title">How Has the Importance of Factors Influencing Telework Adoption Changed Over Time? Observing Pre- to Late-Pandemic Trends Using Multi-Year Data from Two US Regions</div>
       <div class="card-body"><strong>Choi, S.E.</strong>, Kim, I., Wang, X., Soria, J., Mokhtarian, P.L.</div>
     </div>
@@ -937,17 +499,17 @@
     <div class="card">
       <div class="card-meta">3rd Symposium on Activity-Based Modeling · 2024 · Raitenhaslach, Germany</div>
       <div class="card-title">How temporally stable are attitudes? It depends</div>
-      <div class="card-body"><strong>Choi, S.E.</strong>, Mokhtarian, P.L.</div>
+      <div class="card-body"><strong>Choi, S.E.</strong>, Mokhtarian, P.L. (Coauthored presentation)</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">2024 TRB Annual Meeting · Washington, D.C.</div>
+      <div class="card-meta">2024 TRB 103rd Annual Meeting · Washington, D.C.</div>
       <div class="card-title">Exploring the influences on late-pandemic non-commute activity engagement</div>
       <div class="card-body"><strong>Choi, S.E.</strong>, Wang, X., Soria, J., Mokhtarian, P.L.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">2022 TRB Annual Meeting · Washington, D.C.</div>
+      <div class="card-meta">2022 TRB 101st Annual Meeting · Washington, D.C.</div>
       <div class="card-title">Investigating Commuter Preferences for On-Demand Mobility Services Considering Working Flexibility: A Hybrid Choice Modelling Approach</div>
       <div class="card-body">Go, Y., <strong>Choi, S.E.</strong>, Kim, J.</div>
     </div>
@@ -966,103 +528,133 @@
 
     <div class="card">
       <div class="card-meta">83rd Korean Society of Transportation Conference · Gangneung · 2020</div>
-      <div class="card-title">Comparative analysis of the travel behavior of shared electric bicycle service users before and after the outbreak of COVID-19</div>
-      <div class="card-body"><strong>Choi, S.E.</strong>, Kim, J., Seo, D., Cho, Y. Focusing on Seoul and Sejong.</div>
+      <div class="card-title">Comparative analysis of the travel behavior of shared electric bicycle service users before and after the outbreak of COVID-19: Focusing on Seoul and Sejong</div>
+      <div class="card-body"><strong>Choi, S.E.</strong>, Kim, J., Seo, D., Cho, Y.</div>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════ RESEARCH ══════════════════ -->
+<!-- ════════════════════════════════════════════════ RESEARCH -->
 <section id="research" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">🔬</span>
-      <h2 class="section-title">Research</h2>
+    <div class="section-header"><span class="section-emoji">🔬</span><h2 class="section-title">Research Experience</h2></div>
+
+    <div class="card">
+      <div class="card-meta">Cintra, a Ferrovial Company · 2026 – Present</div>
+      <div class="card-title">Travel Behavior Impacts of Autonomous Personal Vehicle Technology</div>
+      <div class="card-body">Designing, administering, and analyzing a survey targeting ~1,500 workers in three metropolitan areas to assess willingness to pay to save travel time. Also collecting qualitative, subjective insights into how AV technology may influence travel behavior.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">Ongoing · Georgia Tech</div>
-      <div class="card-title">Telework &amp; Travel Behavior in the Post-Pandemic Era</div>
-      <div class="card-body">Investigating how remote and hybrid work arrangements reshape travel demand, time use, and urban mobility patterns. Using multi-year survey data from two U.S. regions to track attitudinal and behavioral shifts from pre- to late-pandemic periods.</div>
+      <div class="card-meta">Cintra, a Ferrovial Company · 2025 – Present</div>
+      <div class="card-title">Driverless Taxis: Adoption, Intentions, Perceptions, and Travel Behavior Impacts</div>
+      <div class="card-body">Designed a large-scale survey (n ≈ 2,200) across four major metropolitan areas (Phoenix, San Francisco, Los Angeles, and Austin) to examine robotaxi adoption — including sociodemographic factors, usage contexts, and barriers/motivators. Findings featured in Ferrovial's newsroom.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">Ongoing · Georgia Tech</div>
-      <div class="card-title">Non-Commute Activity &amp; Travel Demand Modeling</div>
-      <div class="card-body">Examining how individuals' non-commute activity engagement—shopping, leisure, social—has evolved through the pandemic and what factors (attitudinal, sociodemographic, technological) drive these changes.</div>
+      <div class="card-meta">Cintra, a Ferrovial Company · 2022 – 2024</div>
+      <div class="card-title">Pandemic-Related Telework and Travel Behavior Impacts</div>
+      <div class="card-body">Contributed to design, administration, data cleaning, and analysis of three large-scale studies: the Work from Home (WFH) Survey (Waves 2 &amp; 3) and the Nonwork Travel Survey (NWTS). Explored teleworking changes, commuting patterns, and nonwork travel among a representative sample.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">Completed · Yonsei University · 2021–2022</div>
-      <div class="card-title">Free-Floating E-Bike Sharing &amp; COVID-19</div>
-      <div class="card-body">Applied unsupervised machine learning to GPS-level trip data to characterize shifts in shared electric bicycle use across Seoul and Sejong before and during the COVID-19 pandemic. Published in <em>Cities</em> (2023).</div>
+      <div class="card-meta">Ministry of Land, Infrastructure and Transport, South Korea · 2021 – 2022</div>
+      <div class="card-title">Self-Driving Public Transportation Traffic Support Technology Tailored to Individual Users</div>
+      <div class="card-body">Planned and executed a campus-based and national stated-preference survey to analyze users' behavior and satisfaction regarding self-driving public transportation services.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">Completed · Yonsei University · 2020–2021</div>
-      <div class="card-title">On-Demand Mobility &amp; Commute Mode Choice</div>
-      <div class="card-body">Hybrid choice modeling of commuter preferences for on-demand mobility services in South Korea, accounting for working flexibility and attitudinal factors. Presented at TRB 2022.</div>
+      <div class="card-meta">Korea Development Institute · 2020 – 2022</div>
+      <div class="card-title">Gimhae Airport–Daedong Expansion: Transportation Demand Estimation &amp; Economic Analysis</div>
+      <div class="card-body">Estimated future demands and benefits of a highway expansion project. Built a database and developed command macros on EMME/4 for modal split and assignments. Automated financial feasibility reporting using Python.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">Metropolitan Transport Commission, South Korea · 2020 – 2021</div>
+      <div class="card-title">BRT Express Bus System Basic Plan Revision</div>
+      <div class="card-body">Reconstructed the national BRT express bus system basic plan: re-established vision and role, adjusted existing routes, discovered new routes, and evaluated priority using network analysis, demand estimation (web-crawling via MATLAB), potential demand analysis, and facility standards.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">Yonsei University Future-Leading Research Initiative · 2020 – 2022</div>
+      <div class="card-title">Smart Mobility User Behavior Analysis and Predictive Model Development</div>
+      <div class="card-body">Conducted multiple studies on smart mobility user behavior and developed materials for the "First/Last Mile Network Establishment Research Forum" by the Gyeonggi Construction Corporation.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">Ministry of Land, Infrastructure and Transport, South Korea · 2020</div>
+      <div class="card-title">Policy Feasibility Analysis: Highway Construction Projects (3 Cases)</div>
+      <div class="card-body">Analyzed the impact of proposed highway lines (Seoul-Yangpyeong, Jecheon-Yeongwol, Ganghwa-Gyeyang) on existing road networks, examining employment effects, economic impacts, environmental considerations, and safety evaluations.</div>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════ TEACHING ══════════════════ -->
+<!-- ════════════════════════════════════════════════ TEACHING -->
 <section id="teaching" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">🏫</span>
-      <h2 class="section-title">Teaching Experience</h2>
+    <div class="section-header"><span class="section-emoji">🏫</span><h2 class="section-title">Teaching Experience</h2></div>
+
+    <div class="sub-label">Georgia Institute of Technology</div>
+
+    <div class="card">
+      <div class="card-meta">Teaching Assistant · Spring 2025</div>
+      <div class="card-title">Statistics in Transportation</div>
+      <div class="card-body">Designed and graded assignments and exams. Instructed two lectures on chi-squared tests and taste heterogeneity for graduate students.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">Georgia Institute of Technology · Spring 2025</div>
-      <div class="card-title">Teaching Assistant — Statistics in Transportation</div>
-      <div class="card-body">Designed and graded assignments and exams. Delivered lectures on chi-squared tests and planned a session on taste heterogeneity and segmentation for graduate students.</div>
+      <div class="card-meta">Group Leader · Fall 2023, 2024 &amp; 2025</div>
+      <div class="card-title">GT 6000 — First-Year Graduate Orientation</div>
+      <div class="card-body">Leading an 8-week extended-orientation program for three consecutive years, supporting first-year graduate students' transition to graduate life. Developed course materials; facilitated discussions on professional development, mental health, and campus resources. Participated in leader training workshops to enhance facilitation and mentorship skills. Received the <strong>CIOS Honor Roll</strong> (Feb 2026) and <strong>Group Leader of the Year</strong> (May 2026) for Fall 2025 leadership.</div>
+    </div>
+
+    <div class="sub-label">Yonsei University</div>
+
+    <div class="card">
+      <div class="card-meta">Teaching Assistant · Spring 2021</div>
+      <div class="card-title">Smart Urban Transit</div>
+      <div class="card-body">Instructed lectures and supervised lab projects on public transportation design using TransCAD. Updated curriculum from EMME 4 to TransCAD mid-semester; adapted labs to online format during COVID-19 restrictions.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">Georgia Institute of Technology · Fall 2023 &amp; Fall 2024</div>
-      <div class="card-title">Group Leader — GT 6000 (Graduate Orientation)</div>
-      <div class="card-body">Led an 8-week extended-orientation program for first-semester graduate students. Developed course materials, facilitated professional development discussions, and provided mentorship and academic support.</div>
+      <div class="card-meta">Teaching Assistant · Fall 2020</div>
+      <div class="card-title">Plan Evaluation</div>
+      <div class="card-body">Instructed lectures and labs on Cost-Benefit Analysis (CBA), Analytic Hierarchy Process (AHP), and Contingent Valuation Method (CVM). Revised materials to clarify complex evaluation methods using Microsoft Excel.</div>
     </div>
 
     <div class="card">
-      <div class="card-meta">Yonsei University · Spring 2021</div>
-      <div class="card-title">Teaching Assistant — Smart Urban Transit</div>
-      <div class="card-body">Instructed lectures and supervised lab projects on public transportation design, analyzing transit routes and demand using TransCAD.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-meta">Yonsei University · Fall 2020</div>
-      <div class="card-title">Teaching Assistant — Plan Evaluation</div>
-      <div class="card-body">Assisted with lectures and labs on Cost-Benefit Analysis, Analytic Hierarchy Process, and Contingent Valuation Method for urban and transport planning.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-meta">Yonsei University · Spring 2020</div>
-      <div class="card-title">Teaching Assistant — Urban Transport Planning</div>
-      <div class="card-body">Guided student projects applying urban transportation planning methodologies, covering issues related to urban transportation systems and travel demand.</div>
+      <div class="card-meta">Teaching Assistant · Spring 2020</div>
+      <div class="card-title">Urban Transport Planning</div>
+      <div class="card-body">Assisted lectures and projects on urban transportation planning methodologies, helping students understand characteristics and problems of urban transportation systems.</div>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════ ACTIVITIES ══════════════════ -->
+<!-- ════════════════════════════════════════════════ ACTIVITIES -->
 <section id="activities" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">🤝</span>
-      <h2 class="section-title">Activities &amp; Leadership</h2>
+    <div class="section-header"><span class="section-emoji">🤝</span><h2 class="section-title">Activities &amp; Leadership</h2></div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🌏</div>
+      <div>
+        <div class="activity-role">Participant &amp; Speaker</div>
+        <div class="activity-org">GUT Forum — International &amp; Interdisciplinary Research Platform</div>
+        <div class="activity-period">2024 – Present</div>
+        <div class="activity-desc">Monthly forums where scholars from Geography, Urban Studies, and Transportation Studies (GUT) share emerging research ideas, connecting Korean researchers worldwide.</div>
+      </div>
     </div>
 
     <div class="activity-item">
       <div class="activity-icon">🚺</div>
       <div>
-        <div class="activity-role">Vice-President</div>
+        <div class="activity-role">Vice-President <span style="font-weight:300; color:var(--muted);">/ Student Advisor</span></div>
         <div class="activity-org">WTS (Women's Transportation Seminar) — Georgia Tech Student Chapter</div>
-        <div class="activity-period">May 2023 – Present</div>
+        <div class="activity-period">2023 – 2025 (currently Student Advisor)</div>
+        <div class="activity-desc">Maintained campus presence through coordination and recruitment; produced annual engagement reports for WTS Atlanta; organized professional seminars, career fairs, development panels, and collaborative workshops.</div>
       </div>
     </div>
 
@@ -1071,7 +663,17 @@
       <div>
         <div class="activity-role">External Affairs Officer</div>
         <div class="activity-org">ITE (Institute of Transportation Engineers) — GT Student Chapter</div>
-        <div class="activity-period">May 2024 – Dec 2024</div>
+        <div class="activity-period">Member since 2022 · Officer Board 2024</div>
+        <div class="activity-desc">Coordinated professional development events; assisted in planning the transportation career fair and other large events; contributed to the annual report.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🇰🇷</div>
+      <div>
+        <div class="activity-role">President</div>
+        <div class="activity-org">GT Civil &amp; Environmental Engineering Korean Student Association (GTCEEKSA)</div>
+        <div class="activity-period">2023 – 2024</div>
       </div>
     </div>
 
@@ -1084,82 +686,158 @@
       </div>
     </div>
 
+    <div class="sub-label">Leadership Programs &amp; Engagements</div>
+
     <div class="activity-item">
-      <div class="activity-icon">🌏</div>
+      <div class="activity-icon">🎓</div>
       <div>
-        <div class="activity-role">Head of Chapter Management, Scale Team</div>
-        <div class="activity-org">Korea Legacy Committee (KLC)</div>
-        <div class="activity-period">Dec 2018 – April 2022</div>
+        <div class="activity-role">Participant — 2026 Emerging Engineering Educators (E3) Workshop</div>
+        <div class="activity-org">EMEE · Chicago</div>
+        <div class="activity-period">July 2026</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🌱</div>
+      <div>
+        <div class="activity-role">Graduate Leadership Academy (GLAD)</div>
+        <div class="activity-org">Georgia Institute of Technology</div>
+        <div class="activity-period">Fall 2025 – Spring 2026</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🪵</div>
+      <div>
+        <div class="activity-role">Woodruff Leadership Program for Graduate Students</div>
+        <div class="activity-org">Georgia Institute of Technology</div>
+        <div class="activity-period">Spring 2025</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🔭</div>
+      <div>
+        <div class="activity-role">Next Generation Science &amp; Technology Leader — NET Grant</div>
+        <div class="activity-org">Korean Federation of Science and Technology Societies (KOFST)</div>
+        <div class="activity-period">May 2024 – Dec 2024 &nbsp;·&nbsp; May 2025 – Dec 2025</div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════ AWARDS ══════════════════ -->
+<!-- ════════════════════════════════════════════════ AWARDS -->
 <section id="awards" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">🏆</span>
-      <h2 class="section-title">Honors &amp; Awards</h2>
+    <div class="section-header"><span class="section-emoji">🏆</span><h2 class="section-title">Honors, Awards &amp; Fellowships</h2></div>
+
+    <div class="sub-label">Fellowships</div>
+
+    <div class="fellow-card">
+      <div class="fellow-icon">🎖️</div>
+      <div>
+        <div class="fellow-title">CEE Future Faculty Fellowship</div>
+        <div class="fellow-meta">Georgia Institute of Technology · January 2026</div>
+      </div>
     </div>
+
+    <div class="fellow-card">
+      <div class="fellow-icon">🌟</div>
+      <div>
+        <div class="fellow-title">CEE GLAD Fellowship</div>
+        <div class="fellow-meta">Georgia Institute of Technology · September 2025</div>
+      </div>
+    </div>
+
+    <div class="fellow-card">
+      <div class="fellow-icon">📘</div>
+      <div>
+        <div class="fellow-title">EAB (External Advisory Board) Fellowship</div>
+        <div class="fellow-meta">Georgia Institute of Technology · September 2022</div>
+      </div>
+    </div>
+
+    <div class="fellow-card">
+      <div class="fellow-icon">🏛️</div>
+      <div>
+        <div class="fellow-title">Wang Fellowship</div>
+        <div class="fellow-meta">Georgia Institute of Technology · August 2022</div>
+      </div>
+    </div>
+
+    <div class="sub-label">Awards &amp; Honors</div>
+
     <div class="awards-grid">
 
       <div class="award-card">
-        <div class="award-icon">🥇</div>
-        <div class="award-title">Winner — Grand Challenge Ideathon</div>
-        <div class="award-body">ITS World Congress (ITSWC) — international smart mobility competition.</div>
-        <span class="award-year">Oct 2019</span>
-        <a class="award-link" href="https://youtu.be/n5IyFNzY6yM?t=46" target="_blank">▶ Watch on YouTube</a>
+        <div class="award-icon">🏅</div>
+        <div class="award-title">GT6000 Group Leader of the Year</div>
+        <div class="award-body">Fall 2025 Section 32. Georgia Institute of Technology.</div>
+        <span class="award-year">May 2026</span>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">📋</div>
+        <div class="award-title">CIOS Honor Roll</div>
+        <div class="award-body">Outstanding Course Leadership — Fall 2025 GT6000 Section 32. Center for Teaching and Learning, Georgia Tech.</div>
+        <span class="award-year">Feb 2026</span>
       </div>
 
       <div class="award-card">
         <div class="award-icon">🏛️</div>
         <div class="award-title">KRIHS Award</div>
-        <div class="award-body">Korea Research Institute for Human Settlements — recognition for research contributions.</div>
+        <div class="award-body">"Optimal location selection for Urban Air Mobility (UAM)" — Land, Infrastructure and Transport Big Data Hackathon, DACON.</div>
         <span class="award-year">Sep 2021</span>
+        <a class="award-link" href="https://dacon.io/competitions/official/235758/overview/description" target="_blank">View competition →</a>
       </div>
 
       <div class="award-card">
         <div class="award-icon">🌆</div>
         <div class="award-title">Excellence Award</div>
-        <div class="award-body">Smart City Platform Idea Contest — top recognition for urban innovation concept.</div>
+        <div class="award-body">"Strategy to relocate public bicycles in Seoul, Korea" — Smart City Platform Idea Contest.</div>
         <span class="award-year">Jul 2020</span>
       </div>
 
       <div class="award-card">
         <div class="award-icon">🎖️</div>
         <div class="award-title">Participation Award</div>
-        <div class="award-body">Smart City Platform Idea Contest.</div>
+        <div class="award-body">"Autonomous On-demand Taxi-sharing Services" — Smart City Platform Idea Contest.</div>
         <span class="award-year">Jul 2020</span>
       </div>
 
       <div class="award-card">
         <div class="award-icon">🌟</div>
         <div class="award-title">Excellence Award</div>
-        <div class="award-body">The Smart Citizens Challenge — civic technology and smart urban solutions.</div>
+        <div class="award-body">"Data-Driven Seoul Public Bike Trip Recommendation" — The Smart Citizens Challenge 2019, Seoul Digital Foundation.</div>
         <span class="award-year">Dec 2019</span>
+        <a class="award-link" href="https://linkareer.com/activity/28382" target="_blank">View activity →</a>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">🥇</div>
+        <div class="award-title">Winner — Grand Challenge Ideathon</div>
+        <div class="award-body">"IoT-enabled smart wristband for elderly with dementia" — ITSWC 2019 YLDP, Singapore. Featured on CNA.</div>
+        <span class="award-year">Oct 2019</span>
+        <a class="award-link" href="https://youtu.be/n5IyFNzY6yM?t=46" target="_blank">▶ Watch CNA interview</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ══════════════════ SKILLS ══════════════════ -->
+<!-- ════════════════════════════════════════════════ SKILLS -->
 <section id="skills" class="section">
   <div class="section-inner">
-    <div class="section-header">
-      <span class="section-emoji">💻</span>
-      <h2 class="section-title">Skills</h2>
-    </div>
+    <div class="section-header"><span class="section-emoji">💻</span><h2 class="section-title">Skills</h2></div>
 
-    <!-- Tag row for conceptual skills -->
     <div class="skills-tag-row">
       <span class="skill-tag">Travel Behavior Modeling</span>
       <span class="skill-tag">Discrete Choice Modeling</span>
       <span class="skill-tag">Structural Equation Modeling</span>
-      <span class="skill-tag">Unsupervised Learning</span>
-      <span class="skill-tag">Survey Methods</span>
+      <span class="skill-tag">Latent Class Analysis</span>
+      <span class="skill-tag">Unsupervised Learning / Clustering</span>
+      <span class="skill-tag">Survey Design &amp; Administration</span>
       <span class="skill-tag">Spatial Analysis</span>
       <span class="skill-tag">English</span>
       <span class="skill-tag">Korean (Native)</span>
@@ -1167,18 +845,15 @@
 
     <div class="skills-divider">Software &amp; Tools</div>
 
-    <!-- Icon grid -->
     <div class="skills-icon-grid">
 
-      <!-- Python -->
       <div class="skill-icon-item">
-        <div class="skill-icon-box" style="background:#fff; border: 1px solid #e8e8e8;">
+        <div class="skill-icon-box" style="background:#fff; border:1px solid #e8e8e8;">
           <img src="https://cdn.simpleicons.org/python" alt="Python">
         </div>
         <span class="skill-icon-label">Python</span>
       </div>
 
-      <!-- R -->
       <div class="skill-icon-item">
         <div class="skill-icon-box" style="background:#276DC3;">
           <span class="skill-icon-letter" style="font-size:2.2rem;">R</span>
@@ -1186,31 +861,27 @@
         <span class="skill-icon-label">R</span>
       </div>
 
-      <!-- MATLAB -->
       <div class="skill-icon-item">
-        <div class="skill-icon-box" style="background:#fff; border: 1px solid #e8e8e8;">
+        <div class="skill-icon-box" style="background:#fff; border:1px solid #e8e8e8;">
           <img src="https://cdn.simpleicons.org/mathworks" alt="MATLAB">
         </div>
         <span class="skill-icon-label">MATLAB</span>
       </div>
 
-      <!-- ArcGIS Pro -->
       <div class="skill-icon-item">
-        <div class="skill-icon-box" style="background:#fff; border: 1px solid #e8e8e8;">
+        <div class="skill-icon-box" style="background:#fff; border:1px solid #e8e8e8;">
           <img src="https://cdn.simpleicons.org/arcgis" alt="ArcGIS">
         </div>
         <span class="skill-icon-label">ArcGIS Pro</span>
       </div>
 
-      <!-- LatentGOLD -->
       <div class="skill-icon-item">
-        <div class="skill-icon-box" style="background: linear-gradient(135deg, #b8860b, #c8a84b);">
+        <div class="skill-icon-box" style="background:linear-gradient(135deg,#b8860b,#c8a84b);">
           <span class="skill-icon-letter" style="font-size:1.1rem; letter-spacing:-0.03em;">LG</span>
         </div>
         <span class="skill-icon-label">LatentGOLD</span>
       </div>
 
-      <!-- Stata -->
       <div class="skill-icon-item">
         <div class="skill-icon-box" style="background:#1a4080;">
           <span class="skill-icon-letter" style="font-size:0.95rem; letter-spacing:0.02em;">STATA</span>
@@ -1218,7 +889,6 @@
         <span class="skill-icon-label">Stata</span>
       </div>
 
-      <!-- SPSS -->
       <div class="skill-icon-item">
         <div class="skill-icon-box" style="background:#052FAD;">
           <span class="skill-icon-letter" style="font-size:0.88rem; letter-spacing:0.02em;">SPSS</span>
@@ -1226,7 +896,6 @@
         <span class="skill-icon-label">SPSS</span>
       </div>
 
-      <!-- Illustrator -->
       <div class="skill-icon-item">
         <div class="skill-icon-box" style="background:#300000;">
           <span class="skill-icon-letter" style="font-size:1.7rem; color:#FF9A00; font-family:'Cormorant Garamond',serif; font-style:italic;">Ai</span>
@@ -1234,7 +903,6 @@
         <span class="skill-icon-label">Illustrator</span>
       </div>
 
-      <!-- Photoshop -->
       <div class="skill-icon-item">
         <div class="skill-icon-box" style="background:#001e36;">
           <span class="skill-icon-letter" style="font-size:1.7rem; color:#31A8FF; font-family:'Cormorant Garamond',serif; font-style:italic;">Ps</span>
@@ -1246,9 +914,8 @@
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
-  © 2025 Seung Eun (Katy) Choi &nbsp;·&nbsp;
+  © 2026 Seung Eun (Katy) Choi &nbsp;·&nbsp;
   <a href="mailto:schoi473@gatech.edu">schoi473@gatech.edu</a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/seung-eun-katy-choi/" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
   Georgia Institute of Technology
@@ -1263,6 +930,5 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
-
 </body>
 </html>
