@@ -56,12 +56,12 @@
     .hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); background-size: 200px; pointer-events: none; }
     .hero-inner { position: relative; z-index: 1; display: flex; align-items: center; gap: 4.5rem; max-width: 1000px; width: 100%; padding: 4rem 2.5rem; }
     .hero-photo-wrap { flex-shrink: 0; }
-    .hero-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--lavender); box-shadow: 0 0 0 8px rgba(180,141,226,0.15), 0 20px 60px rgba(0,0,0,0.5); display: block; }
-    .hero-photo-placeholder { width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, #2d1a50, #4a2a80); border: 3px solid var(--lavender); box-shadow: 0 0 0 8px rgba(180,141,226,0.15), 0 20px 60px rgba(0,0,0,0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; color: rgba(180,141,226,0.6); font-size: 0.7rem; text-align: center; gap: 0.4rem; }
+    .hero-photo { width: 250px; height: 250px; border-radius: 50%; object-fit: cover; object-position: center 38%; border: 3px solid var(--lavender); box-shadow: 0 0 0 8px rgba(180,141,226,0.15), 0 20px 60px rgba(0,0,0,0.5); display: block;}
+    .hero-photo-placeholder { width: 250px; height: 250px; border-radius: 50%;}
     .hero-photo-placeholder svg { width: 42px; height: 42px; opacity: 0.55; }
     .hero-text { flex: 1; }
     .hero-eyebrow { font-size: 0.76rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lavender); margin-bottom: 0.9rem; }
-    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 300; color: var(--white); line-height: 1.06; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 300; color: var(--white); line-height: 1.06; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
     .hero-name em { font-style: italic; color: var(--lavender); }
     .hero-aka { font-size: 0.83rem; color: rgba(255,255,255,0.42); margin-bottom: 1rem; font-weight: 300; letter-spacing: 0.04em; }
     .hero-affil { font-size: 0.88rem; color: rgba(255,255,255,0.68); line-height: 1.7; margin-bottom: 0.7rem; font-weight: 300; }
@@ -242,9 +242,9 @@
         <div class="hero-links">
           <a class="hero-btn primary" href="mailto:schoi473@gatech.edu">✉️ Email Me</a>
           <a class="hero-btn secondary" href="https://www.linkedin.com/in/seung-eun-katy-choi/" target="_blank">💼 LinkedIn</a>
-          <button class="hero-btn secondary" onclick="show('news',document.querySelectorAll('.nav-links button'))">📢 Updates</button></a>
-          <button class="hero-btn secondary" onclick="show('articles',document.querySelectorAll('.nav-links button'))">📰 In the News</button></a>
-          <button class="hero-btn secondary" onclick="show('skills',document.querySelectorAll('.nav-links button'))">💻 Skills</button>
+          <button class="hero-btn secondary" onclick="show('news')">📢 Updates</button>
+          <button class="hero-btn secondary" onclick="show('articles')">📰 In the News</button>
+          <button class="hero-btn secondary" onclick="show('skills')">💻 Skills</button>
         </div>
       </div>
     </div>
