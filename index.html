@@ -100,22 +100,22 @@
     .card-link { display: inline-block; margin-top: 0.8rem; font-size: 0.78rem; font-weight: 500; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--lavender); padding-bottom: 1px; transition: color 0.2s; }
     .card-link:hover { color: var(--purple); }
 
-    /* ── NEWS FEED ── */
-    .news-feed { list-style: none; }
-    .news-item { display: grid; grid-template-columns: 90px 1fr; gap: 0 1.8rem; padding: 1.1rem 0; border-bottom: 1px solid var(--warm); align-items: baseline; }
-    .news-item:first-child { padding-top: 0; }
-    .news-item:last-child { border-bottom: none; }
-    .news-date { font-size: 0.72rem; font-weight: 500; color: var(--lavender); letter-spacing: 0.06em; text-transform: uppercase; padding-top: 0.1rem; white-space: nowrap; }
-    .news-badge { display: inline-block; font-size: 0.67rem; font-weight: 500; padding: 0.18rem 0.55rem; border-radius: 50px; margin-right: 0.5rem; letter-spacing: 0.05em; text-transform: uppercase; vertical-align: middle; }
+    /* ── UPDATES FEED ── */
+    .updates-feed { list-style: none; }
+    .updates-item { display: grid; grid-template-columns: 90px 1fr; gap: 0 1.8rem; padding: 1.1rem 0; border-bottom: 1px solid var(--warm); align-items: baseline; }
+    .updates-item:first-child { padding-top: 0; }
+    .updates-item:last-child { border-bottom: none; }
+    .updates-date { font-size: 0.72rem; font-weight: 500; color: var(--lavender); letter-spacing: 0.06em; text-transform: uppercase; padding-top: 0.1rem; white-space: nowrap; }
+    .updates-badge { display: inline-block; font-size: 0.67rem; font-weight: 500; padding: 0.18rem 0.55rem; border-radius: 50px; margin-right: 0.5rem; letter-spacing: 0.05em; text-transform: uppercase; vertical-align: middle; }
     .badge-pub    { background: #e8f4e8; color: #2d7a2d; border: 1px solid #c8e8c8; }
     .badge-talk   { background: #e8eef8; color: #2d4d8a; border: 1px solid #c8d8f0; }
     .badge-award  { background: #fef8e8; color: #8a6a10; border: 1px solid #f0e0a0; }
-    .badge-news   { background: var(--light-lav); color: var(--purple); border: 1px solid var(--warm); }
+    .badge-updates   { background: var(--light-lav); color: var(--purple); border: 1px solid var(--warm); }
     .badge-service{ background: #f8eef8; color: #7a2d7a; border: 1px solid #e8c8e8; }
     .badge-fellow { background: #e8f8f4; color: #1a7a5a; border: 1px solid #b8e8d8; }
-    .news-text { font-size: 0.92rem; color: #4a4060; line-height: 1.65; font-weight: 300; }
-    .news-text strong { font-weight: 500; color: var(--navy); }
-    .news-text em { font-style: italic; }
+    .updates-text { font-size: 0.92rem; color: #4a4060; line-height: 1.65; font-weight: 300; }
+    .updates-text strong { font-weight: 500; color: var(--navy); }
+    .updates-text em { font-style: italic; }
 
     /* ── EDUCATION TIMELINE ── */
     .timeline { list-style: none; }
@@ -241,7 +241,7 @@
         <div class="hero-links">
           <a class="hero-btn primary" href="mailto:schoi473@gatech.edu">✉️ Email Me</a>
           <a class="hero-btn secondary" href="https://www.linkedin.com/in/seung-eun-katy-choi/" target="_blank">💼 LinkedIn</a>
-          <button class="hero-btn secondary" onclick="show('news')">📢 Updates</button>
+          <button class="hero-btn secondary" onclick="show('updates')">📢 Updates</button>
           <button class="hero-btn secondary" onclick="show('articles')">📰 In the News</button>
           <button class="hero-btn secondary" onclick="show('skills')">💻 Skills</button>
         </div>
@@ -250,35 +250,35 @@
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════ NEWS -->
-<section id="news" class="section">
+<!-- ════════════════════════════════════════════════ UPDATES -->
+<section id="updates" class="section">
   <div class="section-inner">
-    <div class="section-header"><span class="section-emoji">📢</span><h2 class="section-title">News</h2></div>
-    <ul class="news-feed">
+    <div class="section-header"><span class="section-emoji">📢</span><h2 class="section-title">updates</h2></div>
+    <ul class="updates-feed">
 
-      <li class="news-item">
-        <span class="news-date">May 2026</span>
-        <span class="news-text"><span class="news-badge badge-award">Award</span>Received the <strong>GT6000 Group Leader of the Year</strong> award for outstanding course leadership of Fall 2025 Section 32, Georgia Institute of Technology.</span>
+      <li class="updates-item">
+        <span class="updates-date">May 2026</span>
+        <span class="updates-text"><span class="updates-badge badge-award">Award</span>Received the <strong>GT6000 Group Leader of the Year</strong> award for outstanding course leadership of Fall 2025 Section 32, Georgia Institute of Technology.</span>
       </li>
 
-      <li class="news-item">
-        <span class="news-date">Feb 2026</span>
-        <span class="news-text"><span class="news-badge badge-award">Award</span>Named to the <strong>CIOS Honor Roll</strong> — recognized for Outstanding Course Leadership (Fall 2025 GT6000 Section 32) by the Center for Teaching and Learning at Georgia Tech.</span>
+      <li class="updates-item">
+        <span class="updates-date">Feb 2026</span>
+        <span class="updates-text"><span class="updates-badge badge-award">Award</span>Named to the <strong>CIOS Honor Roll</strong> — recognized for Outstanding Course Leadership (Fall 2025 GT6000 Section 32) by the Center for Teaching and Learning at Georgia Tech.</span>
       </li>
 
-      <li class="news-item">
-        <span class="news-date">Jan 2026</span>
-        <span class="news-text"><span class="news-badge badge-fellow">Fellowship</span>Selected as a recipient of the <strong>CEE Future Faculty Fellowship</strong>, Georgia Institute of Technology.</span>
+      <li class="updates-item">
+        <span class="updates-date">Jan 2026</span>
+        <span class="updates-text"><span class="updates-badge badge-fellow">Fellowship</span>Selected as a recipient of the <strong>CEE Future Faculty Fellowship</strong>, Georgia Institute of Technology.</span>
       </li>
 
-      <li class="news-item">
-        <span class="news-date">Jan 2026</span>
-        <span class="news-text"><span class="news-badge badge-talk">Talk</span>Presented at <strong>2026 TRB Annual Meeting</strong>, Washington D.C. — "Understanding Robotaxi Adoption Among Workers in Three US Metropolitan Regions: Using a Zero-Inflated Ordered Probit Model with Correlated Errors (ZIOPC)".</span>
+      <li class="updates-item">
+        <span class="updates-date">Jan 2026</span>
+        <span class="updates-text"><span class="updates-badge badge-talk">Talk</span>Presented at <strong>2026 TRB Annual Meeting</strong>, Washington D.C. — "Understanding Robotaxi Adoption Among Workers in Three US Metropolitan Regions: Using a Zero-Inflated Ordered Probit Model with Correlated Errors (ZIOPC)".</span>
       </li>
 
-      <li class="news-item">
-        <span class="news-date">2026</span>
-        <span class="news-text"><span class="news-badge badge-pub">Publication</span>New paper published: "How has the importance of factors influencing telework adoption changed over time? Observing pre- to late-pandemic trends using multi-year data from two US regions." <em>Travel Behaviour and Society</em> 44, 101233.</span>
+      <li class="updates-item">
+        <span class="updates-date">2026</span>
+        <span class="updates-text"><span class="updates-badge badge-pub">Publication</span>New paper published: "How has the importance of factors influencing telework adoption changed over time? Observing pre- to late-pandemic trends using multi-year data from two US regions." <em>Travel Behaviour and Society</em> 44, 101233.</span>
       </li>
     </ul>
   </div>
